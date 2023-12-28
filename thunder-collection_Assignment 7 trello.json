@@ -1,0 +1,347 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Assignment 7 trello",
+    "dateExported": "2023-12-28T00:06:58.552Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "user Copy",
+            "containerId": "",
+            "created": "2023-12-23T16:58:30.944Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "task",
+            "containerId": "",
+            "created": "2023-12-27T21:08:20.550Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f5977f18-2ede-496f-aeff-09f33ff43110",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "sign-up",
+            "url": "http://localhost:3000/user/sign-up",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-23T16:58:30.948Z",
+            "modified": "2023-12-27T20:02:54.878Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"age\":\"22\",\n  \"username\":\"khaled\",\n  \"email\":\"rixecav886@vasteron.com\",\n  \"password\":\"123123123\",\n  \"gender\":\"male\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9d2b03a3-5c10-4f19-ad15-fbf855fdd14c",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "sign-in",
+            "url": "http://localhost:3000/user/sign-in",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-12-23T16:58:30.948Z",
+            "modified": "2023-12-28T00:03:55.163Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"rixecsav886@vasteron.com\",\n  \"password\":\"123123123\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "istype",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "a74751e3-3e6d-4921-afba-8a85d6c22a2d",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "change-password",
+            "url": "http://localhost:3000/user/change-password",
+            "method": "PATCH",
+            "sortNum": 25000,
+            "created": "2023-12-27T17:32:00.069Z",
+            "modified": "2023-12-27T23:58:02.788Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"password\":\"123123123\",\n  \"new_password\":\"102030405060\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFpazExMjM1QHpzbHN6LmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4OWZlN2Y3ZWVmZWQzZDFkMjgwNDdiIiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxNDU1fQ.QDMbmKpaSd5O30qGe27CuW0OlmGnlx9H3z_S6_vvpLo"
+            },
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "istype",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "a21490d9-c39a-43cf-8634-a3ecedb83230",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "forget-password",
+            "url": "http://localhost:3000/user/forget-password",
+            "method": "POST",
+            "sortNum": 27500,
+            "created": "2023-12-27T18:17:29.631Z",
+            "modified": "2023-12-27T19:09:38.662Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"rixecav886@vasteron.com\",\n  \"password\":\"1020304050\"\n  \n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InFxZDMyczg5czFAenNsc3ouY29tIiwidXNlcm5hbWUiOiJraGFsZWQiLCJfaWQiOiI2NThjNWVkMmRmYTM0MjFiMDI0MzI3ZTYiLCJjb25maXJtRW1haWwiOmZhbHNlLCJpYXQiOjE3MDM2OTkxNjV9.A8fpNQk7XVV0HygsJ6fJ6dJGZdoaq0ox0UR1ffyJWQY"
+            },
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "istype",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "77089be7-344f-4113-9dc8-dc691732f2ec",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "update-user",
+            "url": "http://localhost:3000/user",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2023-12-23T16:58:30.948Z",
+            "modified": "2023-12-28T00:01:47.203Z",
+            "headers": [
+                {
+                    "name": "authentication",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"age\":\"301\",\n  \"username\":\"sheriff\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjYXY4ODZAdmFzdGVyb24uY29tIiwidXNlcm5hbWUiOiJraGFsZWQiLCJfaWQiOiI2NThjYjllOWZhZmIzZjBmZjQ0NzJjZjMiLCJjb25maXJtRW1haWwiOmZhbHNlLCJpYXQiOjE3MDM3MjE2ODh9.QvdpBinbu60FusmJS5mYQSH0B83-7BZrPQE3V8PeM34"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1013dd0e-c1db-4305-b23e-ae975069d903",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "delete-user",
+            "url": "http://localhost:3000/user/hard-delete",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-12-23T16:58:30.948Z",
+            "modified": "2023-12-28T00:02:21.634Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjYXY4ODZAdmFzdGVyb24uY29tIiwidXNlcm5hbWUiOiJraGFsZWQiLCJfaWQiOiI2NThjYjllOWZhZmIzZjBmZjQ0NzJjZjMiLCJjb25maXJtRW1haWwiOmZhbHNlLCJpYXQiOjE3MDM3MjE2ODh9.QvdpBinbu60FusmJS5mYQSH0B83-7BZrPQE3V8PeM34"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e59552ec-1c74-48c0-8a12-2970373f6285",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "add-task",
+            "url": "http://localhost:3000/task",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-12-27T21:08:20.554Z",
+            "modified": "2023-12-28T00:05:57.242Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2M0MWE2NGNlN2RiYTBhNjNhODYxYyIsIm5hbWUiOiJzaGVyaWY1IiwiZW1haWwiOiJzaGVyaWY1QGdtYWlsLmNvbSIsImlhdCI6MTcwMjY0OTcwNX0.nV7zz-JWJbDyfn6RMPjQW18pEiOU2ys9ZAsuIBVmotE.eyJ1c2VyIjp7Il9pZCI6IjY1N2M0MWE2NGNlN2RiYTBhNjNhODYxYyIsIm5hbWUiOiJzaGVyaWY1IiwiZW1haWwiOiJzaGVyaWY1QGdtYWlsLmNvbSIsImNvbmZpcm1FbWFpbCI6ZmFsc2UsImdlbmRlciI6Im1hbGUiLCJwYXNzd29yZCI6IiQyYSQxMCR6bk04bHdFb0FsYko0OFROZzE1L2FlSWVXdlc3cVpIc3BEMW42QXptRC5OejUyeWsydWx1cSIsIl9fdiI6MH0sImlhdCI6MTcwMjY0MzM4MX0.Qt5lbJ3gc8WQ-fXzZ4sml_xuGG8eK74OsEVZA9PGKLU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"task 5\",\n  \"description\":\"this is task 2\",\n  \"status\":\"ToDo\",\n  \"deadline\":\"2023-11-27T23:30:46.223Z\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjc2F2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4YzZmZTBhYzJiYzg2MjM2NzYzNTA0IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxODM1fQ.6_bfWEck2evlz1Ni0xYuXcmQbnHCr5tTrK9pZycGdLg"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d444747e-7405-42b1-a0d2-73101fc6996a",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "soft-delete",
+            "url": "http://localhost:3000/user",
+            "method": "DELETE",
+            "sortNum": 45000,
+            "created": "2023-12-24T14:50:37.794Z",
+            "modified": "2023-12-28T00:03:29.939Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlaG9kd2t0bGhtbHlmanNza0Bja3B0ci5jb20iLCJ1c2VybmFtZSI6ImtoYWxlZCIsIl9pZCI6IjY1OGM2ZTQ5NzEzYTlkMTU1YjgzMjIxNiIsImNvbmZpcm1FbWFpbCI6ZmFsc2UsImlhdCI6MTcwMzcyMTc5M30.MTeAGhBmWimf_g5jy6_2rbaeNchY_AiTFi8FXmptJ3M"
+            },
+            "tests": []
+        },
+        {
+            "_id": "df100d52-ddc6-4ed0-bfe2-dcbd1644cb02",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "delete-task",
+            "url": "http://localhost:3000/task/658c93d1f437a788b38ecde6",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-12-27T21:08:20.554Z",
+            "modified": "2023-12-28T00:06:23.823Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2hlcmlmNSIsImVtYWlsIjoic2hlcmlmMkBnbWFpbC5jb20iLCJpZCI6IjY1ODA1ZWFiNjQ3NzQ2OTQzNjNiMDc0NSIsImlhdCI6MTcwMzAwMzA5NX0.xB4EgAfSO9HiYDF21OagWuxWWudcyojJu1ptHaVVZxc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjc2F2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4YzZmZTBhYzJiYzg2MjM2NzYzNTA0IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxODM1fQ.6_bfWEck2evlz1Ni0xYuXcmQbnHCr5tTrK9pZycGdLg"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ebc9d229-eb44-4099-8ea3-b180275c4e7a",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "update-task",
+            "url": "http://localhost:3000/task/658c9a8d991e057e1c416544",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2023-12-27T21:08:20.554Z",
+            "modified": "2023-12-28T00:06:32.835Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2hlcmlmNSIsImVtYWlsIjoic2hlcmlmMkBnbWFpbC5jb20iLCJpZCI6IjY1ODA1ZWFiNjQ3NzQ2OTQzNjNiMDc0NSIsImlhdCI6MTcwMzA3Njg2MX0.BY3woLMOcmC9dBNtz-ooDpPmkfBu-TMfRIRVORG2t7s"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"title\":\"updated task11s2\",\n  \"assignTo\":\"6588275f73fbb26811a2b326\"\n  \n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjc2F2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4YzZmZTBhYzJiYzg2MjM2NzYzNTA0IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxODM1fQ.6_bfWEck2evlz1Ni0xYuXcmQbnHCr5tTrK9pZycGdLg"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1fca4c3a-74a5-4e92-88cf-78384b6e7806",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "logout",
+            "url": "http://localhost:3000/user/logout",
+            "method": "GET",
+            "sortNum": 95000,
+            "created": "2023-12-23T16:58:30.948Z",
+            "modified": "2023-12-27T23:55:28.094Z",
+            "headers": [
+                {
+                    "name": "authentication",
+                    "value": "auth__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtoYWxlZEBnbWFpbC5jb20iLCJpZCI6IjY1ODU1MDhkYTY5OWY2N2U2YTBlMTk2ZSIsImlhdCI6MTcwMzIzNjE2M30.4dCA5nO95PMDnsLMUBxz68dy53j6UND5JKCL3VVlyOc"
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFpazExMjM1QHpzbHN6LmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4OWZlN2Y3ZWVmZWQzZDFkMjgwNDdiIiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxMzIyfQ.EUbt90vhMus2zfIAx27sVzgOoUeWdVRbdNXyAGdiYU8"
+            },
+            "tests": []
+        },
+        {
+            "_id": "71b51fe0-dea4-46d8-b9bb-4b78291abfe9",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "get-all-tasks-with-user-data",
+            "url": "http://localhost:3000/task",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-12-27T21:08:20.554Z",
+            "modified": "2023-12-27T22:33:19.867Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ea75d729-9a06-4cc5-a943-7a2fb507e100",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "get-user-tasks",
+            "url": "http://localhost:3000/task/user-tasks",
+            "method": "GET",
+            "sortNum": 105000,
+            "created": "2023-12-27T21:08:20.554Z",
+            "modified": "2023-12-28T00:06:41.876Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjc2F2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4YzZmZTBhYzJiYzg2MjM2NzYzNTA0IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxODM1fQ.6_bfWEck2evlz1Ni0xYuXcmQbnHCr5tTrK9pZycGdLg"
+            },
+            "tests": []
+        },
+        {
+            "_id": "6aeabab9-815d-4a17-8fe1-9f85ba6b1728",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "tasks-passed-deadline",
+            "url": "http://localhost:3000/task/passed-deadline",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-12-27T21:08:20.554Z",
+            "modified": "2023-12-27T23:22:04.074Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
