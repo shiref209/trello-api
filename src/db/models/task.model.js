@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from "mongoose";
+import mongoose, { Schema, Types, model } from "mongoose";
 
 const taskSchema = new Schema(
   {
@@ -26,6 +26,10 @@ const taskSchema = new Schema(
     },
     deadline: {
       type: Date,
+    },
+    attachment: {
+      type: Types.ObjectId,
+      ref: "Attachment",
     },
   },
   {

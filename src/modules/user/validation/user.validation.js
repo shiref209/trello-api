@@ -1,5 +1,5 @@
 import joi from "joi";
-
+import { fileSchema } from "../../../utilis/fileSchema.js";
 export const signUpSchema = joi
   .object({
     username: joi.string().min(3).max(30).alphanum().required(),
@@ -28,5 +28,14 @@ export const updateUserSchema = joi
   .object({
     username: joi.string().min(3).max(30).alphanum().required(),
     age: joi.number(),
+  })
+  .required();
+
+export const uploadProfilePicSchema = joi.object({
+  file: joi.object(fileSchema).required(),
+});
+export const uploadCoverPicsSchema = joi
+  .object({
+    files: joi.array().items(joi.object(fileSchema).required()).required(),
   })
   .required();

@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, Types, model } from "mongoose";
 
 const userSchema = new Schema({
   username: {
@@ -28,6 +28,14 @@ const userSchema = new Schema({
   isDeleted: {
     type: Boolean,
     default: false,
+  },
+  profilePic: {
+    type: Types.ObjectId,
+    ref: "Image",
+  },
+  coverPics: {
+    type: [Types.ObjectId],
+    ref: "Image",
   },
 });
 

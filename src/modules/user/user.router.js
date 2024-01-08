@@ -12,9 +12,17 @@ import {
   forgetPassword,
   resetPassword,
   unsubscribe,
+  uploadProfilePic,
+  uploadCoverPics,
 } from "./controllers/user.controller.js";
 import userAuth from "../../middlewares/userAuth.js";
 import verifyToken from "../../middlewares/verifyToken.js";
+import uploadHandler from "../../middlewares/uploadHandler.js";
+import validation from "../../middlewares/validation.js";
+import {
+  uploadCoverPicsSchema,
+  uploadProfilePicSchema,
+} from "./validation/user.validation.js";
 
 const userRouter = Router();
 userRouter.post("/sign-up", asyncHandler(signUp));
@@ -61,5 +69,40 @@ userRouter.get(
   "/unsubscribe/:token",
   asyncHandler(unsubscribe),
   asyncHandler(deleteUser)
+);
+
+// upload profile pic
+userRouter.post(
+  "/profile-pic",
+  asyncHandler(verifyToken),
+  asyncHandler(userAuth),
+  // passing inside function to pass user data to create folder with id of user
+  (req, res, next) => {
+    const upload = uploadHandler({
+      customPath: `profile/${req.user._id}`,
+      isSingle: true,
+    });
+    upload(req, res, next);
+  },
+  validation(uploadProfilePicSchema),
+  asyncHandler(uploadProfilePic)
+);
+
+// multiple images
+userRouter.post(
+  "/cover-pics",
+  asyncHandler(verifyToken),
+  asyncHandler(userAuth),
+  // passing inside function to pass user data to create folder with id of user
+  (req, res, next) => {
+    const upload = uploadHandler({
+      customPath: `cover/${req.user._id}`,
+      isSingle: false,
+    });
+    upload(req, res, next);
+  },
+  validation(uploadCoverPicsSchema),
+
+  asyncHandler(uploadCoverPics)
 );
 export default userRouter;

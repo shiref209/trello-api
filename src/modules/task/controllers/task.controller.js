@@ -1,3 +1,4 @@
+import attachmentModel from "../../../db/models/attachment.model.js";
 import taskModel from "../../../db/models/task.model.js";
 import {
   addTaskSchema,
@@ -53,6 +54,10 @@ export const updateTask = async (req, res, next) => {
 export const deleteTask = async (req, res, next) => {
   const { id } = req.params;
 
+  // delete attachments associated with task
+  const deleteAttachment = await attachmentModel.deleteMany({ taskId: id });
+  console.log(deleteAttachment);
+
   const task = await taskModel.deleteOne({ _id: id, userID: req.user._id });
   //   either task not found or user updating is not creator
 
@@ -85,4 +90,27 @@ export const getTasksPassedDeadline = async (req, res, next) => {
     },
   });
   return res.status(200).json({ msg: "Success", tasks });
+};
+
+// upload attachment
+export const uploadAttachment = async (req, res, next) => {
+  const { id } = req.params;
+  const { originalname, finalDest } = req.file;
+  const attachment = await attachmentModel.create({
+    name: originalname,
+    url: finalDest,
+    taskId: id,
+  });
+  const task = await taskModel.updateOne(
+    { _id: id, userID: req.user._id },
+    { attachment: attachment._id },
+    { new: true }
+  );
+  //   either task not found or user updating is not creator
+  if (!task.matchedCount) {
+    return next(new Error("invalid id"));
+  }
+  return task.modifiedCount
+    ? res.status(200).json({ msg: "Updated" })
+    : res.status(400).json({ msg: "please enter valid update values" });
 };

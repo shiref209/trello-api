@@ -9,6 +9,8 @@ import {
   signUpSchema,
   updateUserSchema,
 } from "../validation/user.validation.js";
+import imageModel from "../../../db/models/image.model.js";
+import taskModel from "../../../db/models/task.model.js";
 
 export const signUp = async (req, res, next) => {
   const { username, email, age, password, gender } = req.body;
@@ -182,6 +184,12 @@ export const updateUser = async (req, res, next) => {
 
 export const deleteUser = async (req, res, next) => {
   const user = await userModel.deleteOne({ _id: req.user._id });
+
+  // delete images of user
+  const deleteImages = await imageModel.deleteMany({ userID: req.user._id });
+
+  // delete tasks of user
+  const deleteTasks = await taskModel.deleteMany({ userID: req.user._id });
   // add token to expired tokens
   await tokenModel.create({ token: req.token });
   // if request sent multiple times, res of 404 not found is sent back
@@ -199,6 +207,13 @@ export const softDeleteUser = async (req, res, next) => {
     { _id: req.user._id },
     { isDeleted: true }
   );
+
+  // delete images of user
+  const deleteImages = await imageModel.deleteMany({ userID: req.user._id });
+
+  // delete tasks of user
+  const deleteTasks = await taskModel.deleteMany({ userID: req.user._id });
+
   // add token to expired tokens
   await tokenModel.create({ token: req.token });
 
@@ -279,4 +294,36 @@ export const unsubscribe = async (req, res, next) => {
   const payload = jwt.verify(token, process.env.CONFIRM_EMAIL_SIGNATURE);
   req.user = payload;
   return next();
+};
+
+// upload profile pic
+export const uploadProfilePic = async (req, res, next) => {
+  console.log("controller fired");
+  const { filename, finalDest } = req.file;
+  const image = await imageModel.create({
+    name: filename,
+    url: finalDest,
+  });
+  const user = await userModel.updateOne(
+    { _id: req.user._id },
+    { profilePic: image._id }
+  );
+  return user.modifiedCount
+    ? res.status(200).json({ msg: "image updated" })
+    : res.status(400).json({ msg: "error" });
+};
+
+export const uploadCoverPics = async (req, res, next) => {
+  const { files } = req;
+  const images = files.map((file) => {
+    return { name: file.filename, url: file.finalDest };
+  });
+  const imagesUpload = await imageModel.create(images, { new: true });
+  const user = await userModel.updateOne(
+    { _id: req.user._id },
+    { $push: { coverPics: imagesUpload.map((image) => image._id) } }
+  );
+  return user.modifiedCount
+    ? res.status(200).json({ msg: "success" })
+    : res.status(500).json({ msg: "query error" });
 };

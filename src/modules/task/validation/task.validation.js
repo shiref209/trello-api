@@ -1,4 +1,5 @@
 import joi from "joi";
+import { fileSchema } from "../../../utilis/fileSchema.js";
 
 export const addTaskSchema = joi
   .object({
@@ -16,3 +17,10 @@ export const updateTaskSchema = joi.object({
   status: joi.string().valid("ToDo", "Doing", "Done"),
   assignTo: joi.string().alphanum(),
 });
+
+export const uploadAttachmentSchema = joi
+  .object({
+    id: joi.string().alphanum().required(),
+    file: joi.object(fileSchema).required(),
+  })
+  .required();

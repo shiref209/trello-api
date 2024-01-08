@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Assignment 7 trello",
-    "dateExported": "2023-12-28T00:06:58.552Z",
+    "dateExported": "2024-01-08T22:21:36.154Z",
     "version": "1.1",
     "folders": [
         {
@@ -17,6 +17,13 @@
             "containerId": "",
             "created": "2023-12-27T21:08:20.550Z",
             "sortNum": 20000
+        },
+        {
+            "_id": "0f558ffb-8832-47c8-acd2-c35ea038b932",
+            "name": "images",
+            "containerId": "",
+            "created": "2024-01-07T17:18:34.379Z",
+            "sortNum": 40000
         }
     ],
     "requests": [
@@ -29,13 +36,38 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-12-23T16:58:30.948Z",
-            "modified": "2023-12-27T20:02:54.878Z",
+            "modified": "2024-01-08T21:14:01.673Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"age\":\"22\",\n  \"username\":\"khaled\",\n  \"email\":\"rixecav886@vasteron.com\",\n  \"password\":\"123123123\",\n  \"gender\":\"male\"\n}",
+                "raw": "{\n  \"age\":\"22\",\n  \"username\":\"khaled\",\n  \"email\":\"rixeca22v8816@vasteron.com\",\n  \"password\":\"123123123\",\n  \"cpassword\":\"123123123\",\n  \"gender\":\"male\"\n}",
                 "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1d2f6f80-979e-439c-b653-18a340202d7a",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "93cbb3c3-52c6-420f-bc67-b6c6bd40b3cd",
+            "name": "upload",
+            "url": "http://localhost:3000/user/upload",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-12-29T12:38:18.429Z",
+            "modified": "2023-12-29T12:40:14.098Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "mine",
+                        "value": "c:\\Users\\pc\\Desktop\\self join.png"
+                    }
+                ]
             },
             "tests": []
         },
@@ -48,12 +80,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-12-23T16:58:30.948Z",
-            "modified": "2023-12-28T00:03:55.163Z",
+            "modified": "2024-01-08T21:14:27.281Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\":\"rixecsav886@vasteron.com\",\n  \"password\":\"123123123\"\n}",
+                "raw": "{\n  \"email\":\"rixeca22v8816@vasteron.com\",\n  \"password\":\"123123123\"\n}",
                 "form": []
             },
             "tests": [
@@ -181,7 +213,7 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2023-12-27T21:08:20.554Z",
-            "modified": "2023-12-28T00:05:57.242Z",
+            "modified": "2024-01-08T21:14:39.657Z",
             "headers": [
                 {
                     "name": "token",
@@ -191,12 +223,12 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\":\"task 5\",\n  \"description\":\"this is task 2\",\n  \"status\":\"ToDo\",\n  \"deadline\":\"2023-11-27T23:30:46.223Z\"\n}",
+                "raw": "{\n  \"title\":\"new task upload 5\",\n  \"description\":\"this is task 2\",\n  \"status\":\"ToDo\",\n  \"deadline\":\"2023-11-27T23:30:46.223Z\"\n}",
                 "form": []
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjc2F2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4YzZmZTBhYzJiYzg2MjM2NzYzNTA0IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxODM1fQ.6_bfWEck2evlz1Ni0xYuXcmQbnHCr5tTrK9pZycGdLg"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjYTIydjg4MTZAdmFzdGVyb24uY29tIiwidXNlcm5hbWUiOiJraGFsZWQiLCJfaWQiOiI2NTljNjU5Nzc5NzliYzgxMTBkNGJlODUiLCJjb25maXJtRW1haWwiOmZhbHNlLCJpYXQiOjE3MDQ3NDg0Njd9.CRsDypNvTe8-C7_yZKC3-c8u0-PeLUcl6rtrLeByA-E"
             },
             "tests": []
         },
@@ -223,11 +255,11 @@
             "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
             "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
             "name": "delete-task",
-            "url": "http://localhost:3000/task/658c93d1f437a788b38ecde6",
+            "url": "http://localhost:3000/task/659c65bf7979bc8110d4be8a",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2023-12-27T21:08:20.554Z",
-            "modified": "2023-12-28T00:06:23.823Z",
+            "modified": "2024-01-08T21:22:55.834Z",
             "headers": [
                 {
                     "name": "token",
@@ -271,6 +303,40 @@
             "auth": {
                 "type": "bearer",
                 "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjc2F2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU4YzZmZTBhYzJiYzg2MjM2NzYzNTA0IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzAzNzIxODM1fQ.6_bfWEck2evlz1Ni0xYuXcmQbnHCr5tTrK9pZycGdLg"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7a48569b-31ef-44ba-b410-81cdd7582f1d",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "bbfedfbf-9f30-49df-9134-35586317ee18",
+            "name": "upload-attachment",
+            "url": "http://localhost:3000/task/upload-attachment/659c65bf7979bc8110d4be8a",
+            "method": "PATCH",
+            "sortNum": 80000,
+            "created": "2024-01-08T20:49:13.506Z",
+            "modified": "2024-01-08T21:15:04.627Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic2hlcmlmNSIsImVtYWlsIjoic2hlcmlmMkBnbWFpbC5jb20iLCJpZCI6IjY1ODA1ZWFiNjQ3NzQ2OTQzNjNiMDc0NSIsImlhdCI6MTcwMzA3Njg2MX0.BY3woLMOcmC9dBNtz-ooDpPmkfBu-TMfRIRVORG2t7s"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "pdf",
+                        "value": "c:\\Users\\pc\\Downloads\\RxResume_PDFExport_shiref209_web-resume_1673022795.pdf"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjYTIydjg4MTZAdmFzdGVyb24uY29tIiwidXNlcm5hbWUiOiJraGFsZWQiLCJfaWQiOiI2NTljNjU5Nzc5NzliYzgxMTBkNGJlODUiLCJjb25maXJtRW1haWwiOmZhbHNlLCJpYXQiOjE3MDQ3NDg0Njd9.CRsDypNvTe8-C7_yZKC3-c8u0-PeLUcl6rtrLeByA-E"
             },
             "tests": []
         },
@@ -341,6 +407,73 @@
             "modified": "2023-12-27T23:22:04.074Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "de130d6b-1fa2-4b2f-8f0e-da4e3833c7c4",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "0f558ffb-8832-47c8-acd2-c35ea038b932",
+            "name": "profile-pic",
+            "url": "http://localhost:3000/user/profile-pic",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-01-07T17:20:03.048Z",
+            "modified": "2024-01-08T08:39:58.365Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "image",
+                        "value": "c:\\Users\\pc\\Desktop\\age.jpg"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjYTJ2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU5YWUwMzgzMThlMWVlMjkwZmI1M2I5IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzA0NjQ4Nzg5fQ.H2ZlCBCtb6z1hJuOGVALMnKSXb-Tg4fLxtkds3t9_6s"
+            },
+            "tests": []
+        },
+        {
+            "_id": "75795003-2aa8-41e4-acd0-8244de64b419",
+            "colId": "d3a7212a-8205-421f-8951-8fe0b0fc284d",
+            "containerId": "0f558ffb-8832-47c8-acd2-c35ea038b932",
+            "name": "cover-pics",
+            "url": "http://localhost:3000/user/cover-pics",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-01-08T11:13:26.062Z",
+            "modified": "2024-01-08T22:12:57.757Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "image",
+                        "value": "c:\\Users\\pc\\Desktop\\age.jpg"
+                    },
+                    {
+                        "name": "image",
+                        "value": "c:\\Users\\pc\\Desktop\\self join.png",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "image",
+                        "value": "c:\\Users\\pc\\Pictures\\lexical eniviroment.png"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpeGVjYTJ2ODg2QHZhc3Rlcm9uLmNvbSIsInVzZXJuYW1lIjoia2hhbGVkIiwiX2lkIjoiNjU5YWUwMzgzMThlMWVlMjkwZmI1M2I5IiwiY29uZmlybUVtYWlsIjpmYWxzZSwiaWF0IjoxNzA0NjQ4Nzg5fQ.H2ZlCBCtb6z1hJuOGVALMnKSXb-Tg4fLxtkds3t9_6s"
+            },
             "tests": []
         }
     ]
